@@ -1,4 +1,4 @@
-package com.jc.photo.model;
+package com.devin.luminland.model;
 
 import java.util.*;
 

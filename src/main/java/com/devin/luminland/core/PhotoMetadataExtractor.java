@@ -1,4 +1,4 @@
-package com.jc.photo.core;
+package com.devin.luminland.core;
 
 import com.drew.imaging.ImageMetadataReader;
 import com.drew.imaging.ImageProcessingException;

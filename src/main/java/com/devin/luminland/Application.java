@@ -1,4 +1,4 @@
-package com.jc.photo;
+package com.devin.luminland;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +13,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * - Web 界面和命令行两种使用方式
  */
 @SpringBootApplication
-public class PhotoOrganizerApplication {
+
+public class Application {
     
     public static void main(String[] args) {
-        SpringApplication.run(PhotoOrganizerApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 }
 

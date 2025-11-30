@@ -1,9 +1,9 @@
-package com.jc.photo.service;
+package com.devin.luminland.service;
 
-import com.jc.photo.core.FileUtils;
-import com.jc.photo.core.MediaTypeDetector;
-import com.jc.photo.model.MediaFileInfo;
-import com.jc.photo.model.ScanResult;
+import com.devin.luminland.core.FileUtils;
+import com.devin.luminland.core.MediaTypeDetector;
+import com.devin.luminland.model.MediaFileInfo;
+import com.devin.luminland.model.ScanResult;
 
 import java.io.File;
 import java.util.*;

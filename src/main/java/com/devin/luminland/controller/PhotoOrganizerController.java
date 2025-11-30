@@ -1,10 +1,10 @@
-package com.jc.photo.controller;
+package com.devin.luminland.controller;
 
-import com.jc.photo.model.MediaFileInfo;
-import com.jc.photo.model.OrganizeResult;
-import com.jc.photo.model.ScanResult;
-import com.jc.photo.service.MediaOrganizeService;
-import com.jc.photo.service.MediaScanService;
+import com.devin.luminland.model.MediaFileInfo;
+import com.devin.luminland.model.OrganizeResult;
+import com.devin.luminland.model.ScanResult;
+import com.devin.luminland.service.MediaOrganizeService;
+import com.devin.luminland.service.MediaScanService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

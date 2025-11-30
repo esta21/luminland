@@ -74,8 +74,6 @@ A: 检查路径是否正确，使用绝对路径
 ## 📚 更多文档
 
 - [README.md](README.md) - 完整项目文档
-- [WEB_GUIDE.md](WEB_GUIDE.md) - Web 界面详细指南
-- [USAGE.md](USAGE.md) - 命令行使用方法
 
 ---
 

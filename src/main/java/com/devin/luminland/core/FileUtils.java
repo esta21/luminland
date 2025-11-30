@@ -1,4 +1,4 @@
-package com.jc.photo.core;
+package com.devin.luminland.core;
 
 import java.io.File;
 import java.nio.file.*;
