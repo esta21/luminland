@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片处理工具</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📸🎬 照片处理工具</h1>
+            <p class="subtitle">综合性的照片和视频处理工具集 - 扫描、统计、分类整理</p>
+        </div>
+
+        <div class="main-content">
+            <!-- 输入区域 -->
+            <div class="card">
+                <h2>选择照片和视频目录</h2>
+                <div class="input-group">
+                    <label for="path-input">目录路径：</label>
+                    <input 
+                        type="text" 
+                        id="path-input" 
+                        placeholder="例如: /Users/devin/Pictures" 
+                        value="/Users/devin/Pictures/canon/100EOSR6"
+                    >
+                    <button class="btn btn-secondary" onclick="browseFolder()" title="选择文件夹">
+                        📁 浏览
+                    </button>
+                    <button class="btn btn-secondary" onclick="showHelpDialog()" title="如何获取路径？" style="background: #5a6268;">
+                        ❓ 帮助
+                    </button>
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="scanPhotos()">
+                        <span class="icon">🔍</span> 扫描文件
+                    </button>
+                    <button class="btn btn-success" onclick="organizePhotos()" id="organize-btn" disabled>
+                        <span class="icon">📁</span> 开始整理
+                    </button>
+                </div>
+            </div>
+
+            <!-- 扫描结果区域 -->
+            <div class="card" id="scan-result-card" style="display: none;">
+                <h2>扫描结果</h2>
+                <div id="scan-results"></div>
+            </div>
+
+            <!-- 处理结果区域 -->
+            <div class="card" id="result-card" style="display: none;">
+                <h2>处理结果</h2>
+                <div id="results"></div>
+            </div>
+
+            <!-- 加载提示 -->
+            <div class="loading" id="loading" style="display: none;">
+                <div class="spinner"></div>
+                <p>正在处理中...</p>
+            </div>
+
+            <!-- 错误提示 -->
+            <div class="alert alert-error" id="error" style="display: none;">
+                <span class="icon">⚠️</span>
+                <span id="error-message"></span>
+            </div>
+
+            <!-- 成功提示 -->
+            <div class="alert alert-success" id="success" style="display: none;">
+                <span class="icon">✅</span>
+                <span id="success-message"></span>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>支持格式：JPG, PNG, CR3, RAW, NEF, ARW, MP4, MOV, AVI, MKV 等</p>
+            <p>© 2024 Photo Processing Tool</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
