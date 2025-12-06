@@ -1,10 +1,13 @@
 package com.devin.luminland.config;
 
+import com.devin.luminland.service.ImageEditService;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+
+import java.util.List;
 
 @Configuration
 public class SpringBeanConfig {
@@ -19,6 +22,8 @@ public class SpringBeanConfig {
             System.out.println("✅ Application is ready!");
             System.out.println("🚀 Chat with you agent: " + accessUrl);
             System.out.println("🎉========================================🎉\n");
+
+            event.getApplicationContext().getBean(ImageEditService.class).beautifyImageAuto(List.of("/Users/devin/Pictures/canon/test/DB2A3291.JPG") );
         };
     }
 }

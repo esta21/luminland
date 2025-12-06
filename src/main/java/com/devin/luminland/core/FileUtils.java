@@ -1,14 +1,17 @@
 package com.devin.luminland.core;
 
 import java.io.File;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
+
 
 /**
  * 文件工具类
  * 提供文件操作相关的工具方法
  */
 public class FileUtils {
-    
+
     /**
      * 移动文件到目标目录
      * 如果目标文件已存在，自动添加数字后缀
@@ -16,26 +19,26 @@ public class FileUtils {
     public static Path moveFile(File sourceFile, File targetDir) throws Exception {
         Path source = sourceFile.toPath();
         Path target = new File(targetDir, sourceFile.getName()).toPath();
-        
+
         // 如果目标文件已存在，添加数字后缀
         int counter = 1;
         String baseName = sourceFile.getName();
         String extension = MediaTypeDetector.getFileExtension(sourceFile);
-        
+
         if (extension != null) {
             String nameWithoutExt = baseName.substring(0, baseName.lastIndexOf('.'));
-            
+
             while (target.toFile().exists()) {
                 String newName = nameWithoutExt + "_" + counter + "." + extension;
                 target = new File(targetDir, newName).toPath();
                 counter++;
             }
         }
-        
+
         Files.move(source, target, StandardCopyOption.REPLACE_EXISTING);
         return target;
     }
-    
+
     /**
      * 格式化文件大小
      */
@@ -50,7 +53,7 @@ public class FileUtils {
             return String.format("%.2f GB", size / (1024.0 * 1024.0 * 1024.0));
         }
     }
-    
+
     /**
      * 确保目录存在，如果不存在则创建
      */

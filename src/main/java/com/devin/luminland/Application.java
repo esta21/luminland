@@ -2,6 +2,7 @@ package com.devin.luminland;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 /**
  * 照片处理工具 Web 应用
@@ -13,7 +14,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * - Web 界面和命令行两种使用方式
  */
 @SpringBootApplication
-
+@ComponentScan(basePackages = "com.devin.luminland")
 public class Application {
     
     public static void main(String[] args) {

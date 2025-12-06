@@ -14,23 +14,20 @@
  * limitations under the License.
  */
 
-package com.devin.luminland.ai.chat;
+package com.devin.luminland.ai.alibaba.chat;
 
 import com.alibaba.cloud.ai.agent.studio.loader.AgentLoader;
 import com.alibaba.cloud.ai.dashscope.chat.DashScopeChatModel;
 import com.alibaba.cloud.ai.graph.GraphRepresentation;
 import com.alibaba.cloud.ai.graph.agent.BaseAgent;
-
 import com.alibaba.cloud.ai.graph.agent.ReactAgent;
+import jakarta.annotation.Nonnull;
 import org.springframework.stereotype.Component;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.concurrent.ConcurrentHashMap;
-
-import jakarta.annotation.Nonnull;
 
 
 /**
@@ -47,7 +44,6 @@ import jakarta.annotation.Nonnull;
 class AgentStaticLoader implements AgentLoader {
 
 	private final Map<String, BaseAgent> agents = new ConcurrentHashMap<>();
-
 
 
 	public AgentStaticLoader(DashScopeChatModel dashScopeChatModel) {
